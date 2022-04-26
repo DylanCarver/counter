@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "netlify-functions-test-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dylan Carver <dylc2770@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "faunadb": "^4.5.4"
+  }
+}
