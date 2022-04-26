@@ -10,9 +10,8 @@ const client = new faunadb.Client({
 const { Get, Match, Index } = faunadb.query;
 exports.handler = async (event, context) => {
   const doc = await client.query(Get(Match(Index("count_by_custom_id"), 1)));
-  const currentCount = doc.data.amount;
   return {
     statusCode: 200,
-    body: currentCount.toString(),
+    body: JSON.stringify(doc.data),
   };
 };
